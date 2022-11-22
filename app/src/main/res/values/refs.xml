@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_user" />
+    <drawable name="username_right" />
+    <drawable name="ic_password" />
+    <drawable name="ic_name" />
+    <drawable name="ic_email" />
+</resources>
