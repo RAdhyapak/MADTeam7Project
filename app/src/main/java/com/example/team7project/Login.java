@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.team7project.entities.AuthUser;
+import com.example.team7project.entities.User;
 import com.example.team7project.services.RestService;
 import com.google.gson.Gson;
 
@@ -68,8 +69,11 @@ public class Login extends AppCompatActivity {
                             ResponseBody responseBody = response.body();
                             String body = responseBody.string();
                             if (response.isSuccessful()) {
+                                User user = gson.fromJson(body, User.class);
+                                Log.d(TAG, "User Successfully Logged in as:" + user.toString());
                                 Log.d(TAG, "User Successfully Logged in:" + body);
-                                Intent intent = new Intent(Login.this, MainActivity.class);
+                                Intent intent = new Intent(Login.this, Home.class);
+                                intent.putExtra("user", user);
                                 startActivity(intent);
                             }
                         }

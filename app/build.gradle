@@ -42,4 +42,8 @@ dependencies {
 
     // Utilities
     implementation 'org.apache.commons:commons-lang3:3.6'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
