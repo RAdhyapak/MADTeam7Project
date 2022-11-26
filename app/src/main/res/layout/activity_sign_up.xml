@@ -7,6 +7,7 @@
     tools:context=".SignUp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,8 +21,8 @@
             android:fontFamily="@font/poppinsbold"
             android:gravity="center"
             android:text="@string/signup"
-            android:textSize="30sp"
             android:textColor="@color/colorAccent"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,6 +114,7 @@
                 android:drawableEnd="@drawable/ic_password"
                 android:drawableRight="@drawable/ic_password"
                 android:fontFamily="@font/poppinsmedium"
+                android:inputType="textPassword"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -148,5 +150,15 @@
             app:layout_constraintTop_toBottomOf="@+id/buttonSignUp"
             tools:targetApi="jelly_bean" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="8dp"
+        android:text="login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

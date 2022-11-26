@@ -1,14 +1,14 @@
 package com.example.team7project;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.team7project.entities.AuthUser;
 import com.example.team7project.entities.User;
@@ -31,6 +31,7 @@ public class Login extends AppCompatActivity {
     private EditText username;
     private EditText password;
     private Button loginButton;
+    private Button signUpButton;
 
     private RestService restService;
 
@@ -47,6 +48,16 @@ public class Login extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         loginButton = findViewById(R.id.buttonLogin);
+        signUpButton = (Button) findViewById(R.id.signUp);
+
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, SignUp.class);
+                startActivity(intent);
+            }
+        });
+
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
