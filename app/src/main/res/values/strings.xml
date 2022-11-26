@@ -7,8 +7,9 @@
     <string name="login">Login</string>
     <string name="signuphere">Sign up here!</string>
     <string name="signup">Sign up</string>
-    <string name="fullname">fullname</string>
+    <string name="fullname">First and Last Name:</string>
     <string name="email">E-mail:</string>
     <string name="loginhere">Already have an account? Log in here:</string>
     <string name="sign_up">Sign Up</string>
+    <string name="login_signUpPage">login</string>
 </resources>

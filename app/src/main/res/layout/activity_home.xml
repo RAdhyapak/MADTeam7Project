@@ -6,16 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <ImageButton
+        android:id="@+id/profile"
+        android:layout_width="414dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="3dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="415dp"
+        android:layout_height="560dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
         android:padding="5dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/navbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:id="@+id/navbar"
@@ -36,7 +50,7 @@
             app:srcCompat="@drawable/icon_browse" />
 
         <ImageButton
-            android:id="@+id/imageButtonMap"
+            android:id="@+id/imageButtonHome"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -44,11 +58,13 @@
             app:srcCompat="@drawable/icon_home" />
 
         <ImageButton
-            android:id="@+id/imageButtonSettings"
+            android:id="@+id/imageButtonFavorites"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/icon_fav" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

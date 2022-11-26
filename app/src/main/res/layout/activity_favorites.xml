@@ -25,7 +25,7 @@
             app:srcCompat="@drawable/icon_browse" />
 
         <ImageButton
-            android:id="@+id/imageButtonMap"
+            android:id="@+id/imageButtonHome"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -33,7 +33,7 @@
             app:srcCompat="@drawable/icon_home" />
 
         <ImageButton
-            android:id="@+id/imageButtonSettings"
+            android:id="@+id/imageButtonFavorites"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
