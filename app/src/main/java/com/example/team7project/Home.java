@@ -2,30 +2,53 @@ package com.example.team7project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.team7project.adapters.MediaItemAdapter;
 import com.example.team7project.adapters.MediaListAdapter;
+import com.example.team7project.entities.MediaList;
 import com.example.team7project.entities.User;
 import com.example.team7project.services.MediaListService;
+import com.example.team7project.services.RestService;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+import java.util.List;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 public class Home extends AppCompatActivity {
+    private static final String TAG = "MediaItems";
+
+    private List<MediaList> mediaLists;
+    private RestService rs;
+
+    // widgets
+    MediaListAdapter mlAdapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         MediaListService mlService = new MediaListService();
+        rs = RestService.getInstance();
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        User user = getIntent().getParcelableExtra("user");
-        MediaListAdapter mlAdapter = new MediaListAdapter(Home.this, user.getMedialists());
-        recyclerView.setAdapter(mlAdapter);
+//        User user = getIntent().getParcelableExtra("user");
+        getUserMediaLists(rs);
 
         //navbar link to browse activity
         ImageButton buttonList = findViewById(R.id.imageButtonList);
@@ -47,5 +70,29 @@ public class Home extends AppCompatActivity {
             Intent intent = new Intent(Home.this, ProfilePage.class);
             startActivity(intent);
         });
+    }
+
+    private void getUserMediaLists(RestService rs) {
+        Gson gson = new Gson();
+        rs.get("medialists", new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                // TODO: Show a toast
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                ResponseBody responseBody = response.body();
+                String body = responseBody.string();
+                if (response.isSuccessful()) {
+                    mediaLists = gson.fromJson(body, new TypeToken<List<MediaList>>(){}.getType());
+                    mlAdapter = new MediaListAdapter(Home.this, mediaLists);
+                    recyclerView.setAdapter(mlAdapter);
+                } else {
+                    Log.d(TAG, "Error fetching MediaList");
+                }
+            }
+        });
+
     }
 }

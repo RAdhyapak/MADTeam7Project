@@ -42,7 +42,7 @@ public class MediaItemsActivity extends AppCompatActivity {
             rs.get("medialists/" + mediaListId, new Callback() {
                 @Override
                 public void onFailure(@NonNull Call call, @NonNull IOException e) {
-
+                    // TODO: Show a toast
                 }
 
                 @Override
