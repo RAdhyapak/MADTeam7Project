@@ -1,6 +1,7 @@
 package com.example.team7project.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.team7project.MediaItemsActivity;
 import com.example.team7project.R;
 import com.example.team7project.entities.MediaList;
 
@@ -45,6 +47,7 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
+        private int id;
         private TextView titleTextView;
         private ImageView imageview;
         private TextView upvotes;
@@ -55,9 +58,11 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
             titleTextView = itemView.findViewById(R.id.title);
             imageview = itemView.findViewById(R.id.mediaListImage);
             upvotes = itemView.findViewById(R.id.textUpvotes);
+            itemView.setOnClickListener(this);
         }
 
         public void bindTo(MediaList mediaList) {
+            id = mediaList.getId();
             titleTextView.setText(mediaList.getTitle());
             Glide.with(context).load(R.drawable.img_badminton).into(imageview);
             upvotes.setText(String.valueOf(mediaList.getUpvotes()));
@@ -66,6 +71,9 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
         @Override
         public void onClick(View v) {
             // TODO: open mediaItem list
+            Intent intent = new Intent(context, MediaItemsActivity.class);
+            intent.putExtra("mediaListId", id);
+            context.startActivity(intent);
         }
     }
 }

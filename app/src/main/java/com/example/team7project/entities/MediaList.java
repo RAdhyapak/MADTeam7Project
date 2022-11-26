@@ -13,13 +13,13 @@ public class MediaList implements Parcelable {
     private String title;
     private long upvotes;
     private int imageResource = R.drawable.img_badminton;
-    private List<MediaItem> mediaitems;
+    private List<MediaItem> mediaItems;
 
     public MediaList(int id, String title, long upvotes, List<MediaItem> mediaItems) {
         this.id = id;
         this.title = title;
         this.upvotes = upvotes;
-        this.mediaitems = mediaItems;
+        this.mediaItems = mediaItems;
     }
 
     protected MediaList(Parcel in) {
@@ -73,23 +73,23 @@ public class MediaList implements Parcelable {
         this.imageResource = imageResource;
     }
 
-    public List<MediaItem> getMediaitems() {
-        return mediaitems;
+    public List<MediaItem> getMediaItems() {
+        return mediaItems;
     }
 
-    public void setMediaitems(List<MediaItem> mediaitems) {
-        this.mediaitems = mediaitems;
+    public void setMediaItems(List<MediaItem> mediaItems) {
+        this.mediaItems = mediaItems;
     }
 
     @Override
     public String toString() {
         return "MediaList{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", upvotes=" + upvotes +
-                ", imageResource=" + imageResource +
-                ", mediaitems=" + mediaitems +
-                '}';
+            "id=" + id +
+            ", title='" + title + '\'' +
+            ", upvotes=" + upvotes +
+            ", imageResource=" + imageResource +
+            ", mediaitems=" + mediaItems +
+            '}';
     }
 
     @Override
