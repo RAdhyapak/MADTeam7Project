@@ -3,9 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/lorna/AndroidStudioProjects/MediaSquare/app/src/main/res/drawable/list_vector.xml" value="0.236" />
-        <entry key="..\:/Users/lorna/AndroidStudioProjects/MediaSquare/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/lorna/AndroidStudioProjects/MediaSquare/app/src/main/res/layout/grid_item.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/drawable-v24/mylist_vector.xml" value="0.135" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/activity_browse.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/activity_favorites.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/activity_home.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/activity_login.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/activity_main.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/activity_media_items.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/activity_profile_page.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/grid_item.xml" value="0.2692502532928065" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/view_media_item.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/lorna/AndroidStudioProjects/MADTeam7Project-main/app/src/main/res/layout/view_media_list.xml" value="0.16574074074074074" />
       </map>
     </option>
   </component>

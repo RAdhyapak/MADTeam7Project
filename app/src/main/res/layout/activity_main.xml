@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <androidx.constraintlayout.widget.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".MainActivity"
-  android:background="#4E4E4E"
->
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#4E4E4E"
+    >
 
 
 
     <TextView
-    android:id="@+id/textView2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="30dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginEnd="257dp"
-    android:layout_marginBottom="1dp"
-    android:text="Welcome, User"
-    android:textColor="#FFFFFF"
-    android:textSize="10pt"
-    app:layout_constraintBottom_toTopOf="@+id/textView"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-  />
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="257dp"
+        android:layout_marginBottom="1dp"
+        android:text="Welcome, User"
+        android:textColor="#FFFFFF"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -45,56 +45,56 @@
 
 
     <Spinner
-    android:id="@+id/spinner"
-    android:layout_width="140dp"
-    android:layout_height="48dp"
-    android:layout_marginStart="46dp"
-    android:layout_marginTop="10dp"
-    android:backgroundTint="@color/white"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@+id/textView2"
-    app:layout_constraintTop_toTopOf="parent"
-  />
+        android:id="@+id/spinner"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <GridView
-    android:id="@+id/gridView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:numColumns="2"
-    android:layout_marginTop="80dp"
-    android:layout_marginBottom="60dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-  />
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
 
     <LinearLayout
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:background="@color/cardview_dark_background"
-    android:orientation="horizontal"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-  >
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
 
         <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:id="@+id/listButton"
-      android:drawableLeft="@drawable/mylist_vector"
-      android:text="List"
-      android:layout_margin="4dp"
-    />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/listButton"
+            android:drawableLeft="@drawable/mylist_vector"
+            android:text="List"
+            android:layout_margin="4dp"
+            />
         <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:id="@+id/searchButton"
-      android:drawableLeft="@drawable/search_vector"
-      android:text="Search"
-      android:layout_margin="4dp"
-    />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/searchButton"
+            android:drawableLeft="@drawable/search_vector"
+            android:text="Search"
+            android:layout_margin="4dp"
+            />
 
     </LinearLayout>
 

@@ -1,5 +1,18 @@
 <resources>
-    <string name="app_name">MediaSquare</string>
+    <string name="app_name">Team7project</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="button">Button</string>
+    <string name="log_in">Log In</string>
+    <string name="login">Login</string>
+    <string name="signuphere">Sign up here!</string>
+    <string name="signup">Sign up</string>
+    <string name="fullname">First and Last Name:</string>
+    <string name="email">E-mail:</string>
+    <string name="loginhere">Already have an account? Log in here:</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login_signUpPage">login</string>
+
     <string-array name="mediatype">
         <item> Select </item>
         <item> Movies </item>
