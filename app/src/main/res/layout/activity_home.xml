@@ -67,4 +67,16 @@
 
     </LinearLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/teal_700"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="6dp"
+        android:src="@drawable/ic_baseline_playlist_add_24"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,4 +46,7 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //For add button
+    implementation 'com.google.android.material:material:1.7.0'
 }
