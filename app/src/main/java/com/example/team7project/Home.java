@@ -3,7 +3,9 @@ package com.example.team7project;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,7 @@ import com.example.team7project.entities.MediaList;
 import com.example.team7project.entities.User;
 import com.example.team7project.services.MediaListService;
 import com.example.team7project.services.RestService;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -34,8 +37,8 @@ public class Home extends AppCompatActivity {
     private RestService rs;
 
     // widgets
-    MediaListAdapter mlAdapter;
-    RecyclerView recyclerView;
+    private MediaListAdapter mlAdapter;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +73,15 @@ public class Home extends AppCompatActivity {
             Intent intent = new Intent(Home.this, ProfilePage.class);
             startActivity(intent);
         });
+
+        FloatingActionButton fab = findViewById(R.id.createMediaListButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, CreateMediaList.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void getUserMediaLists(RestService rs) {
@@ -78,6 +90,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 // TODO: Show a toast
+                Toast.makeText(Home.this, "An error occurred", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -86,8 +99,10 @@ public class Home extends AppCompatActivity {
                 String body = responseBody.string();
                 if (response.isSuccessful()) {
                     mediaLists = gson.fromJson(body, new TypeToken<List<MediaList>>(){}.getType());
-                    mlAdapter = new MediaListAdapter(Home.this, mediaLists);
-                    recyclerView.setAdapter(mlAdapter);
+                    runOnUiThread(() -> {
+                        mlAdapter = new MediaListAdapter(Home.this, mediaLists);
+                        recyclerView.setAdapter(mlAdapter);
+                    });
                 } else {
                     Log.d(TAG, "Error fetching MediaList");
                 }

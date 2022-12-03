@@ -36,6 +36,10 @@ public class MediaItemsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_media_items);
         rs = RestService.getInstance();
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MediaItemsActivity.this));
+
         int mediaListId = getIntent().getIntExtra("mediaListId", -1);
         if (mediaListId != -1) {
             Gson gson = new Gson();
@@ -52,10 +56,10 @@ public class MediaItemsActivity extends AppCompatActivity {
                     if (response.isSuccessful()) {
                         mediaList = gson.fromJson(body, MediaList.class);
                         Log.d(TAG, "MediaItems fetched as:" + mediaList.toString());
-                        recyclerView = findViewById(R.id.recyclerView);
-                        recyclerView.setLayoutManager(new LinearLayoutManager(MediaItemsActivity.this));
-                        miAdapter = new MediaItemAdapter(MediaItemsActivity.this, mediaList.getMediaItems());
-                        recyclerView.setAdapter(miAdapter);
+                        runOnUiThread(() -> {
+                            miAdapter = new MediaItemAdapter(MediaItemsActivity.this, mediaList.getMediaItems());
+                            recyclerView.setAdapter(miAdapter);
+                        });
                     } else {
                         Log.d(TAG, "Error fetching MediaList");
                     }

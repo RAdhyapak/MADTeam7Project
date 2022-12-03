@@ -64,7 +64,7 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
         public void bindTo(MediaList mediaList) {
             id = mediaList.getId();
             titleTextView.setText(mediaList.getTitle());
-            Glide.with(context).load(R.drawable.img_badminton).into(imageview);
+            Glide.with(context).load(R.drawable.sample).into(imageview);
             upvotes.setText(String.valueOf(mediaList.getUpvotes()));
         }
 

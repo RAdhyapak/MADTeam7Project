@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
                 Gson gson = new Gson();
                 String json = gson.toJson(new AuthUser(uname, pass));
                 Log.d(TAG, "Json:" + json);
-                restService.post(json, "users/login", new Callback() {
+                restService.post(json, "user/login", new Callback() {
                     @Override
                     public void onFailure(@NonNull Call call, @NonNull IOException e) {
                         e.printStackTrace();

@@ -8,7 +8,7 @@
 
     <ImageButton
         android:id="@+id/profile"
-        android:layout_width="414dp"
+        android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_marginTop="3dp"
         android:scaleType="fitCenter"
@@ -19,23 +19,38 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="415dp"
-        android:layout_height="560dp"
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
         android:padding="5dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintVertical_bias="0.0">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createMediaListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="Create"
+        android:src="@drawable/icon_create"
+        app:layout_constraintBottom_toTopOf="@+id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <LinearLayout
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#abdbe3"
+        android:background="#0277BD"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#76b5c5"
+            android:background="#81D4FA"
             app:srcCompat="@drawable/icon_home" />
 
         <ImageButton

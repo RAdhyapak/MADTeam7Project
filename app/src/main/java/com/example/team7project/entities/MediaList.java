@@ -12,7 +12,7 @@ public class MediaList implements Parcelable {
     private int id;
     private String title;
     private long upvotes;
-    private int imageResource = R.drawable.img_badminton;
+    private int imageResource = R.drawable.sample;
     private List<MediaItem> mediaItems;
 
     public MediaList(int id, String title, long upvotes, List<MediaItem> mediaItems) {
