@@ -23,7 +23,7 @@
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="MediaList Name"
+        android:hint="Media List Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mediaItemRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="600dp"
         android:layout_centerHorizontal="true"
         android:padding="5dp"
         android:scrollbars="vertical"
@@ -42,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mediaListName"
-        app:layout_constraintVertical_bias="0.057">
+        app:layout_constraintVertical_bias="0.2">
 
     </androidx.recyclerview.widget.RecyclerView>
 

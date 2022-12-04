@@ -77,6 +77,7 @@ public class Login extends AppCompatActivity {
                             Intent intent = new Intent(Login.this, Home.class);
                             intent.putExtra("user", user);
                             startActivity(intent);
+                            finish();
                         }
                     }
                 });

@@ -26,5 +26,12 @@ public class Favorites extends AppCompatActivity {
             Intent intent = new Intent(Favorites.this, Browse.class);
             startActivity(intent);
         });
+
+        //profile banner link to profile activity
+        ImageButton buttonProfile = findViewById(R.id.imageButtonProfile);
+        buttonProfile.setOnClickListener(view -> {
+            Intent intent = new Intent(Favorites.this, ProfilePage.class);
+            startActivity(intent);
+        });
     }
 }

@@ -50,7 +50,6 @@ public class Home extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        User user = getIntent().getParcelableExtra("user");
         getUserMediaLists(rs);
 
         //navbar link to browse activity
@@ -68,7 +67,7 @@ public class Home extends AppCompatActivity {
         });
 
         //profile banner link to profile activity
-        ImageButton buttonProfile = findViewById(R.id.profile);
+        ImageButton buttonProfile = findViewById(R.id.imageButtonProfile);
         buttonProfile.setOnClickListener(view -> {
             Intent intent = new Intent(Home.this, ProfilePage.class);
             startActivity(intent);
@@ -108,6 +107,15 @@ public class Home extends AppCompatActivity {
                 }
             }
         });
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

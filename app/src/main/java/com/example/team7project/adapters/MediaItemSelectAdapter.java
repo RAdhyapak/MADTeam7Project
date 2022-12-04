@@ -3,6 +3,7 @@ package com.example.team7project.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,11 @@ public class MediaItemSelectAdapter extends RecyclerView.Adapter<MediaItemSelect
     @Override
     public void onBindViewHolder(@NonNull MediaItemSelectViewHolder holder, int position) {
         MediaItem mediaItem = mediaItems.get(position);
+        if (selectedMediaItems.contains(mediaItem)) {
+            holder.itemView.setBackgroundColor(Color.LTGRAY);
+        } else {
+            holder.itemView.setBackgroundColor(Color.WHITE);
+        }
         holder.bindTo(mediaItem);
     }
 

@@ -2,6 +2,7 @@ package com.example.team7project.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
     public void onBindViewHolder(@NonNull MediaListAdapter.ViewHolder holder, int position) {
         MediaList mediaList = mediaLists.get(position);
         holder.bindTo(mediaList);
+        holder.setIsRecyclable(false);
     }
 
     @Override
@@ -51,6 +53,7 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
         private TextView titleTextView;
         private ImageView imageview;
         private TextView upvotes;
+        private TextView subtitle;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +61,7 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
             titleTextView = itemView.findViewById(R.id.title);
             imageview = itemView.findViewById(R.id.mediaListImage);
             upvotes = itemView.findViewById(R.id.textUpvotes);
+            subtitle = itemView.findViewById(R.id.subTitle);
             itemView.setOnClickListener(this);
         }
 
@@ -66,6 +70,7 @@ public class MediaListAdapter extends RecyclerView.Adapter<MediaListAdapter.View
             titleTextView.setText(mediaList.getTitle());
             Glide.with(context).load(R.drawable.sample).into(imageview);
             upvotes.setText(String.valueOf(mediaList.getUpvotes()));
+            subtitle.setText(mediaList.getUsername() != null? mediaList.getUsername() : "");
         }
 
         @Override

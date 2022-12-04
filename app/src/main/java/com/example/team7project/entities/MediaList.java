@@ -13,12 +13,22 @@ public class MediaList implements Parcelable {
     private String title;
     private long upvotes;
     private int imageResource = R.drawable.sample;
+    private String username;
     private List<MediaItem> mediaItems;
 
     public MediaList(int id, String title, long upvotes, List<MediaItem> mediaItems) {
         this.id = id;
         this.title = title;
         this.upvotes = upvotes;
+        this.mediaItems = mediaItems;
+    }
+
+    public MediaList(int id, String title, long upvotes, int imageResource, String username, List<MediaItem> mediaItems) {
+        this.id = id;
+        this.title = title;
+        this.upvotes = upvotes;
+        this.imageResource = imageResource;
+        this.username = username;
         this.mediaItems = mediaItems;
     }
 
@@ -79,6 +89,14 @@ public class MediaList implements Parcelable {
 
     public void setMediaItems(List<MediaItem> mediaItems) {
         this.mediaItems = mediaItems;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override

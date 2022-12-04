@@ -18,11 +18,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".BrowseList"
+            android:exported="false" />
+        <activity
             android:name=".CreateMediaList"
             android:exported="false" />
         <activity
             android:name=".MediaItemsActivity"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Home" />
@@ -42,9 +45,7 @@
             android:exported="false" />
         <activity
             android:name=".Home"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Login"
             android:exported="true">

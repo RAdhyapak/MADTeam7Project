@@ -4,10 +4,12 @@ public class Category {
 
     private int id;
     private String name;
+    private String img;
 
-    public Category(int id, String name) {
+    public Category(int id, String name, String img) {
         this.id = id;
         this.name = name;
+        this.img = img;
     }
 
     public int getId() {
@@ -26,11 +28,20 @@ public class Category {
         this.name = name;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     @Override
     public String toString() {
         return "Category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", img='" + img + '\'' +
                 '}';
     }
 }
