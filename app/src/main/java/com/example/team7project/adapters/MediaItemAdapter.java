@@ -63,7 +63,9 @@ public class MediaItemAdapter extends RecyclerView.Adapter<MediaItemAdapter.View
 
         public void bindTo(MediaItem mediaItem) {
             titleTextView.setText(mediaItem.getTitle());
-            Glide.with(context).load(R.drawable.sample).into(imageview);
+            int itemImg = context.getResources().getIdentifier(mediaItem.getImg(),
+                    "drawable", context.getPackageName());
+            Glide.with(context).load(itemImg).into(imageview);
             platformTextView.setText(mediaItem.getPlatform().getName());
             categoryTextView.setText(mediaItem.getCategory().getName());
         }

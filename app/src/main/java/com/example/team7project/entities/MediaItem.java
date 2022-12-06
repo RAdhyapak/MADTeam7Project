@@ -6,12 +6,21 @@ public class MediaItem {
     private String title;
     private Category category;
     private Platform platform;
+    private String img;
 
     public MediaItem(int id, String title, Category category, Platform platform) {
         this.id = id;
         this.title = title;
         this.category = category;
         this.platform = platform;
+    }
+
+    public MediaItem(int id, String title, Category category, Platform platform, String img) {
+        this.id = id;
+        this.title = title;
+        this.category = category;
+        this.platform = platform;
+        this.img = img;
     }
 
     public int getId() {
@@ -44,6 +53,14 @@ public class MediaItem {
 
     public void setPlatform(Platform platform) {
         this.platform = platform;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     @Override

@@ -44,7 +44,6 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        MediaListService mlService = new MediaListService();
         rs = RestService.getInstance();
 
         recyclerView = findViewById(R.id.recyclerView);
@@ -99,7 +98,7 @@ public class Home extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     mediaLists = gson.fromJson(body, new TypeToken<List<MediaList>>(){}.getType());
                     runOnUiThread(() -> {
-                        mlAdapter = new MediaListAdapter(Home.this, mediaLists);
+                        mlAdapter = new MediaListAdapter(Home.this, mediaLists, "Home");
                         recyclerView.setAdapter(mlAdapter);
                     });
                 } else {

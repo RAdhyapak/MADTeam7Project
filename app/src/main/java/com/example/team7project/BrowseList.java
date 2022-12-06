@@ -87,7 +87,7 @@ public class BrowseList extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     mediaLists = gson.fromJson(body, new TypeToken<List<MediaList>>(){}.getType());
                     runOnUiThread(() -> {
-                        mlAdapter = new MediaListAdapter(BrowseList.this, mediaLists);
+                        mlAdapter = new MediaListAdapter(BrowseList.this, mediaLists, "Browse");
                         recyclerView.setAdapter(mlAdapter);
                     });
                 } else {

@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/ic_baseline_playlist_add_24.xml" value="0.1625" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_browse.xml" value="0.238" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_create.xml" value="0.186" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_fav.xml" value="0.238" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_home.xml" value="0.19" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_profile.xml" value="0.19" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_select.xml" value="0.22" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_unfav.xml" value="0.238" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/drawable/icon_upvote.xml" value="0.1185" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_browse.xml" value="0.3380208333333333" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_browse_list.xml" value="0.3880208333333333" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_create_media_list.xml" value="0.16049382716049382" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_favorites.xml" value="0.37395833333333334" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_home.xml" value="0.325" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_login.xml" value="0.3880208333333333" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_main.xml" value="0.3880208333333333" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_media_items.xml" value="0.3333333333333333" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_profile_page.xml" value="0.22448979591836735" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/activity_sign_up.xml" value="0.2518518518518518" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/view_media_category.xml" value="0.3880208333333333" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/view_media_item.xml" value="0.4466666666666667" />
+        <entry key="..\:/database/MADTeam7Project/app/src/main/res/layout/view_media_list.xml" value="0.263681592039801" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
